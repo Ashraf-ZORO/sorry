@@ -1,25 +1,35 @@
-setTimeout(() => {
-  document.getElementById("loader").style.display = "none";
-}, 2000);
+// كود لتوليد قلوب عائمة عشوائية في الخلفية تلقائياً
+function createHeart() {
+    const container = document.getElementById('heartsContainer');
+    if (!container) return;
 
-function checkPassword(){
-  const pass = document.getElementById("passwordInput").value;
-
-  if(pass === "1234"){
-    document.getElementById("passwordPage").classList.remove("active");
-    document.getElementById("letterPage").classList.add("active");
-
-    // 🔥 فتح الرسالة بانيميشن
+    const heart = document.createElement('div');
+    heart.classList.add('heart-particle');
+    heart.innerHTML = '❤️';
+    
+    // تحديد موقع أفقي عشوائي وحجم عشوائي للقلب
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.fontSize = Math.random() * 15 + 15 + 'px';
+    
+    // تحديد سرعة حركة عشوائية لكل قلب
+    const duration = Math.random() * 3 + 3; // بين 3 إلى 6 ثواني
+    heart.style.animationDuration = duration + 's';
+    
+    container.appendChild(heart);
+    
+    // حذف القلب بعد ما تخلص حركته عشان المتصفح ميهنجش
     setTimeout(() => {
-      document.querySelector(".letter").classList.add("open");
-    }, 300);
-
-  }else{
-    document.getElementById("error").innerText = "Wrong password";
-  }
+        heart.remove();
+    }, duration * 1000);
 }
 
-function showVideoPage(){
-  document.getElementById("letterPage").classList.remove("active");
-  document.getElementById("videoPage").classList.add("active");
-}
+// تشغيل إنتاج القلوب كل 400 مللي ثانية
+setInterval(createHeart, 400);
+
+// محاولة تشغيل الأغنية تلقائياً بمجرد ما تضغط في أي مكان في الصفحة
+document.addEventListener('click', () => {
+    const music = document.getElementById('bgMusic');
+    if (music && music.paused) {
+        music.play().catch(err => console.log("المتصفح يحتاج تفاعل لتشغيل الصوت: ", err));
+    }
+});
