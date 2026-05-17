@@ -1,36 +1,25 @@
-const music =
-document.getElementById("bgMusic");
+setTimeout(() => {
+  document.getElementById("loader").style.display = "none";
+}, 2000);
 
 function checkPassword(){
+  const pass = document.getElementById("passwordInput").value;
 
-  const password =
-  document.getElementById("passwordInput").value;
+  if(pass === "1234"){
+    document.getElementById("passwordPage").classList.remove("active");
+    document.getElementById("letterPage").classList.add("active");
 
-  if(password === "Alaa"){
-
-    document.getElementById("page1")
-    .classList.remove("show");
-
-    document.getElementById("page2")
-    .classList.add("show");
-
-    music.play();
+    // 🔥 فتح الرسالة بانيميشن
+    setTimeout(() => {
+      document.querySelector(".letter").classList.add("open");
+    }, 300);
 
   }else{
-
-    document.getElementById("error").innerText =
-    "Wrong Password ❤️";
-
+    document.getElementById("error").innerText = "Wrong password";
   }
-
 }
 
-function openVideoPage(){
-
-  document.getElementById("page2")
-  .classList.remove("show");
-
-  document.getElementById("page3")
-  .classList.add("show");
-
+function showVideoPage(){
+  document.getElementById("letterPage").classList.remove("active");
+  document.getElementById("videoPage").classList.add("active");
 }
