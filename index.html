@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Alaa ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mp3">
+</audio>
+
+<!-- PAGE 1 -->
+<div id="page1" class="page show">
+
+  <div class="password-box">
+
+    <h1>Enter Password ❤️</h1>
+
+    <input type="password" id="passwordInput" placeholder="Password">
+
+    <button onclick="checkPassword()">
+      Open
+    </button>
+
+    <p id="error"></p>
+
+  </div>
+
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2" class="page">
+
+  <div class="hearts"></div>
+
+  <div class="letter-container">
+
+    <img src="photo.jpg" class="photo">
+
+    <div class="letter">
+
+      <h1>My Love ❤️</h1>
+
+      <p>
+        حط رسالتك هنا ❤️
+        <br><br>
+        اكتب الكلام اللي انت عايزه...
+      </p>
+
+    </div>
+
+    <div class="arrow">
+      ↓
+    </div>
+
+    <button class="next-btn" onclick="openVideoPage()">
+      دوس علي ❤️
+    </button>
+
+  </div>
+
+</div>
+
+<!-- PAGE 3 -->
+<div id="page3" class="page">
+
+  <div class="love-text top-right">
+    Love u my baby ❤️
+  </div>
+
+  <div class="video-box">
+
+    <video controls autoplay>
+      <source src="video.mp4" type="video/mp4">
+    </video>
+
+  </div>
+
+  <div class="love-text bottom-left">
+    I'm sorry ❤️
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
