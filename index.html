@@ -1,100 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My baby ❤️</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link rel="stylesheet" href="style.css">
+  <title>For Alaa ❤️</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- MUSIC -->
-<audio id="bgMusic" loop>
-  <source src="music.mp3" type="audio/mp3">
-</audio>
+<!-- LOADER -->
+<div id="loader">
+  <h1>For My Little Lady ❤️</h1>
+</div>
 
-<!-- PAGE 1 -->
-<div id="page1" class="page show">
+<!-- HEARTS -->
+<div class="hearts"></div>
+
+<!-- PASSWORD PAGE -->
+<section id="passwordPage" class="page active">
 
   <div class="password-box">
-
-    <h1>Enter Password ❤️</h1>
+    <h1>Enter The Password ❤️</h1>
 
     <input type="password" id="passwordInput" placeholder="Password">
 
-    <button onclick="checkPassword()">
-      Open
-    </button>
+    <button onclick="checkPassword()">Open</button>
 
     <p id="error"></p>
-
   </div>
 
-</div>
+</section>
 
-<!-- PAGE 2 -->
-<div id="page2" class="page">
+<!-- LETTER PAGE -->
+<section id="letterPage" class="page">
 
-  <div class="hearts"></div>
+  <div class="letter-wrapper">
 
-  <div class="letter-container">
-
-    <img src="photo.jpg" class="photo">
+    <img src="photo.jpg" class="love-image" />
 
     <div class="letter">
 
-      <h1>My Love ❤️</h1>
+      <h1>My Love Letter ❤️</h1>
 
       <p>
-        طلب اعتذار رسمى ل الليدى الصغنونه لولى ❤️ 
-        <br><br>
-        حقك علي ياروح قلبي على اللي حصل 
-كنت بهزر معاكي والله ومكنش قصدي اي حاجه وربنا اللي يشهد على قد اي انا بحبك وقد اي انتي حته مني وميهونش علي زعلك ولا تفكيرك ده 
-مش عاوزك تفكري ف كده ابدا انا جنبك ياحبيبتي وعلطول معاكي من قلبي عشان انا بحبك وعاوز ابقى معاكي عاوز ادلعك احميكي ابسطك اوريكي حاجات عمرك مشوفتيها واعوضك عن كل حاجه 
-اتمني الطلب يتوافق عليه وتصدقي ان والله انا كنت بهزر وانك بنوتي بجد وحته مني وعمري م اكدب ف حبى ليكي 
-وبحبك كتيييييييييييييير اوى اوى اوى اوى ماي ڤيڤوريت ليدي الصغنونه ❤️❤️❤️❤️❤️❤️❤️❤️❤️
+        حط رسالتك هنا ❤️<br><br>
+        اكتب أي كلام رومانسي تحبه وهيظهر كأنه رسالة قديمة متقفولة واتفتحت ❤️
       </p>
 
     </div>
 
-    <div class="arrow">
-      ↓
+    <div class="scroll-down">↓</div>
+
+    <div class="button-area">
+      <button onclick="showVideoPage()">دوس علي ❤️</button>
     </div>
 
-    <button class="next-btn" onclick="openVideoPage()">
-      دوس علي ❤️
-    </button>
-
   </div>
 
-</div>
+</section>
 
-<!-- PAGE 3 -->
-<div id="page3" class="page">
+<!-- VIDEO PAGE -->
+<section id="videoPage" class="page">
 
-  <div class="love-text top-right">
-    Love u my baby ❤️
-  </div>
+  <div class="floating-text top-right">Love u ❤️</div>
 
   <div class="video-box">
-
     <video controls autoplay>
       <source src="video.mp4" type="video/mp4">
     </video>
-
   </div>
 
-  <div class="love-text bottom-left">
-    I'm sorry ❤️
-  </div>
+  <div class="floating-text bottom-left">Forever ❤️</div>
 
-</div>
+</section>
 
 <script src="script.js"></script>
-
 </body>
+
 </html>
